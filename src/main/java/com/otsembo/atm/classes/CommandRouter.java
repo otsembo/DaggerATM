@@ -12,12 +12,12 @@ final public class CommandRouter {
 
 
     @Inject
-    CommandRouter(){
-
+    CommandRouter(HelloWorldCommand helloWorldCommand){
+        commands.put(helloWorldCommand.key(), helloWorldCommand);
     }
 
     //create map
-    private final Map<String, Command> commands = Collections.emptyMap();
+    private  Map<String, Command> commands = Collections.emptyMap();
 
     public Command.Status route(String input){
 

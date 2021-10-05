@@ -8,9 +8,7 @@ import java.util.List;
 public class HelloWorldCommand implements Command {
 
     @Inject
-    HelloWorldCommand(){
-
-    }
+    HelloWorldCommand(){}
 
     @Override
     public String key() {

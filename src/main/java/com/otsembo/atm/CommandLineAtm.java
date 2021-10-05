@@ -10,15 +10,13 @@ public class CommandLineAtm {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CommandRouterFactory factory =
-                DaggerCommandRouterFactory.create();
+
+        CommandRouterFactory factory = DaggerCommandRouterFactory.create();
 
         CommandRouter commandRouter = factory.router();
 
         while(scanner.hasNextLine()){
-
             commandRouter.route(scanner.nextLine());
-
         }
 
     }

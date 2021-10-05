@@ -10,14 +10,13 @@ import javax.inject.Inject;
 
 final public class CommandRouter {
 
+    //create map
+    private final Map<String, Command> commands = new HashMap<>();
 
     @Inject
     CommandRouter(HelloWorldCommand helloWorldCommand){
         commands.put(helloWorldCommand.key(), helloWorldCommand);
     }
-
-    //create map
-    private  Map<String, Command> commands = Collections.emptyMap();
 
     public Command.Status route(String input){
 

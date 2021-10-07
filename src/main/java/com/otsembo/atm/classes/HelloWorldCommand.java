@@ -1,14 +1,19 @@
 package com.otsembo.atm.classes;
 
 import com.otsembo.atm.interfaces.Command;
+import com.otsembo.atm.interfaces.Outputter;
 
 import javax.inject.Inject;
 import java.util.List;
 
 public class HelloWorldCommand implements Command {
 
+    private final Outputter outputter;
+
     @Inject
-    HelloWorldCommand(){}
+    HelloWorldCommand(Outputter outputter){
+        this.outputter = outputter;
+    }
 
     @Override
     public String key() {
@@ -17,10 +22,7 @@ public class HelloWorldCommand implements Command {
 
     @Override
     public Status handleInput(List<String> input) {
-        if(!input.isEmpty()){
-            return Status.INVALID;
-        }
-        System.out.println("world!");
+        outputter.output("world!");
         return Status.HANDLED;
     }
 }

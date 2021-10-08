@@ -10,13 +10,41 @@ This application simulates a command line ATM application. A user can log in to 
 ### PROJECT REQUIREMENTS
 
 This application has been built using the following:
-> Java 1.8
-> Gradle Groovy
-> Dagger 2.x
+> Java 1.8 ~ JDK
+
+> Gradle Groovy ~ Build System
+
+> Dagger 2.x ~ Dependency
 
 You can create an executable jar file by following either of the followng.
 
 * JetBrains Documentation
-    https://www.jetbrains.com/help/idea/compiling-applications.html
+
+  -  https://www.jetbrains.com/help/idea/compiling-applications.html
+  
 * Java CLI
-    jar cmf atm.mf atm.jar /* .class  /* .java
+  -  jar cmf atm.mf atm.jar /* .class  /* .java
+
+### SAMPLE COMMANDS
+
+The following is a list of sample commands to run the application
+
+* Log in user
+
+        login user
+ 
+* Deposit cash
+
+        deposit 5000
+        
+* Withdraw cash
+
+        withdraw 200
+               
+* Log out
+
+        logout
+        
+        
+## LICENSE
+This application is distributed under the MIT open license. Feel free to contribute and share.

@@ -7,16 +7,20 @@ import javax.inject.Inject;
 public class LoginCommand extends SingleArgCommand{
 
     private final Outputter outputter;
+    private final Database database;
+
 
     @Inject
-    LoginCommand(Outputter outputter){
+    LoginCommand(Database database, Outputter outputter){
         this.outputter = outputter;
+        this.database = database;
     }
 
     @Override
     protected Status handleArg(String arg) {
-        outputter.output(arg + " is logged in.");
-        return null;
+        Database.Account account = database.getAccount(arg);
+        outputter.output(arg + " is logged in with balance: "+ account.balance());
+        return Status.HANDLED;
     }
 
     @Override

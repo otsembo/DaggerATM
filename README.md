@@ -16,5 +16,5 @@ This application has been built using the following:
 
 You can create an executable jar file by following either of the followng.
 
-a. * (https://www.jetbrains.com/help/idea/compiling-applications.html) - JetBrains Documentation
-b. * jar cmf atm.mf atm.jar /* .class  /* .java
+* (https://www.jetbrains.com/help/idea/compiling-applications.html) - JetBrains Documentation
+* jar cmf atm.mf atm.jar /* .class  /* .java
